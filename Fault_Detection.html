@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fault Detection System</title>
+</head>
+<body>
+
+    <h2>Manufacturing Fault Detection</h2>
+
+    <form action="/predict" method="post">
+
+        <label>Flow Cool Pressure:</label><br>
+        <input type="text" name="FLOWCOOLPRESSURE"><br><br>
+
+        <label>Flow Cool Flow Rate:</label><br>
+        <input type="text" name="FLOWCOOLFLOWRATE"><br><br>
+
+        <label>Ion Gauge Pressure:</label><br>
+        <input type="text" name="IONGAUGEPRESSURE"><br><br>
+
+        <label>Etch Beam Voltage:</label><br>
+        <input type="text" name="ETCHBEAMVOLTAGE"><br><br>
+
+        <label>Etch Beam Current:</label><br>
+        <input type="text" name="ETCHBEAMCURRENT"><br><br>
+
+        <label>Rotation Speed:</label><br>
+        <input type="text" name="ROTATIONSPEED"><br><br>
+
+        <input type="submit" value="Check Fault">
+
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
